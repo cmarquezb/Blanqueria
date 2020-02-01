@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(226, 230, 236);">
+  <a class="navbar-brand" href="/">      
+    <img src="/assets/images/logo4.png" alt=""> 
+  </a>
+  <button class = "navbar-toggler" type = "button" (click) = "toggleNavbar ()"> 
+    <span class = "navbar-toggler-icon"> </span> 
+  </button> 
+  <div class = "collapse navbar-collapse" [ngClass] = "{'show': navbarOpen}">
+      <ul class="navbar-nav ml-auto">        
+        <li class="nav-item active">
+          <a class="nav-link scroll" routerLink="/" routerLinkActive="active"><button type="button" class="btn btn-primary">Home</button><span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link scroll" routerLink="/productos" routerLinkActive="active"><button type="button" class="btn btn-primary">Productos</button></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link scroll" routerLink="/envio" routerLinkActive="active"><button type="button" class="btn btn-primary">Costos de envío</button></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link scroll" routerLink="/location" routerLinkActive="active"><button type="button" class="btn btn-primary">Donde estamos</button></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link scroll" routerLink="contact" routerLinkActive="active"><button type="button" class="btn btn-primary">Contactos</button></a>
+        </li>            
+      </ul>
+    </div>
+  </nav>

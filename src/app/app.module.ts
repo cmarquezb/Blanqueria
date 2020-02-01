@@ -1,0 +1,56 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { MyhomeComponent } from './todo/myhome/myhome.component';
+import { MyformComponent } from './todo/myform/myform.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { PopoverModule } from 'ngx-bootstrap/popover';
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { SortableModule } from 'ngx-bootstrap/sortable';
+import { MymenuComponent } from './todo/mymenu/mymenu.component';
+import { MyaboutComponent } from './todo/myabout/myabout.component';
+import { MyproductComponent } from './todo/myproduct/myproduct.component';
+import { MycontactComponent } from './todo/mycontact/mycontact.component';
+import { EnvioComponent } from './todo/envio/envio.component';
+import { FootComponent } from './todo/foot/foot.component';
+import { MylocationComponent } from './todo/mylocation/mylocation.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    MyhomeComponent,
+    MyformComponent,
+    MymenuComponent,
+    MyaboutComponent,
+    MyproductComponent,
+    MycontactComponent,
+    EnvioComponent,
+    FootComponent,
+    MylocationComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    AngularFontAwesomeModule,
+    AccordionModule.forRoot(),
+    CarouselModule.forRoot(),
+    PopoverModule.forRoot(),
+    TabsModule.forRoot(),
+    TypeaheadModule.forRoot(),
+    BsDatepickerModule.forRoot(),
+    BsDropdownModule.forRoot(),
+    SortableModule.forRoot()
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
