@@ -1,15 +1,73 @@
-body,
-html {
-  height: 100%;
+.elform {
+    /* The image used */
+    margin:0 auto;
+    background: url("../../../assets/images/bed-contacto.jpg");
+    /* Full height */
+    height: 100%;
+    width: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+.main-section{
+    margin:0 auto;
+    margin-top: -25px;
+    padding: 0;
+}
+.user-img{
+    margin-top: -20px;
+    margin-bottom: 35px;
+}
+.user-img img{
+    width: 80px;
+    height: 65px;
+    box-shadow: 8px 8px 8px #5a3c20;
 }
 
-.bg {
-  /* The image used */
-  background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg");
-  /* Full height */
-  height: 100%;
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.modal-content{
+    background-color: rgb(133, 82, 24);
+    opacity: .70;
+    padding: 0 20px;
+    box-shadow: 8px 8px 8px #848484;
+}
+.user-header{
+    margin-top: 5px;
+    color: #ffffff;
+}
+.user-form{
+    margin-top: -10px;
+    padding: 0;
+}
+.form-group input{
+    height: 35px;
+    font-size: 18px;
+    border: 0;
+    padding-left: 40px;
+    border-radius: 5px;
+}
+
+.user1-group{
+    position: absolute;
+    padding-top: 7px;
+    left: 8px;
+    font-size: 22px;
+}
+.user2-group{
+    position: absolute;
+    padding-top: 7px;
+    left: 8px;
+    font-size: 22px;
+}
+.user3-group{
+    position: absolute;
+    padding-top: 7px;
+    left: 8px;
+    font-size: 22px;
+}
+.user4-group{
+    position: absolute;
+    padding-top: 7px;
+    left: 8px;
+    font-size: 22px;
 }
