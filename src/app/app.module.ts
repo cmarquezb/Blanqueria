@@ -22,6 +22,9 @@ import { MycontactComponent } from './todo/mycontact/mycontact.component';
 import { EnvioComponent } from './todo/envio/envio.component';
 import { FootComponent } from './todo/foot/foot.component';
 import { MylocationComponent } from './todo/mylocation/mylocation.component';
+import { AddComponent } from './todo/productos/add/add.component';
+import { EditComponent } from './todo/productos/edit/edit.component';
+import { ViewComponent } from './todo/productos/view/view.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { MylocationComponent } from './todo/mylocation/mylocation.component';
     MycontactComponent,
     EnvioComponent,
     FootComponent,
-    MylocationComponent
+    MylocationComponent,
+    AddComponent,
+    EditComponent,
+    ViewComponent
   ],
   imports: [
     BrowserModule,

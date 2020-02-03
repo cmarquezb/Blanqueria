@@ -82,3 +82,5 @@
 [0201/030305.625:ERROR:crash_report_database_win.cc(469)] failed to stat report
 [0201/030517.762:ERROR:crash_report_database_win.cc(469)] failed to stat report
 [0201/043309.248:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0203/003341.406:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0203/020459.305:ERROR:crash_report_database_win.cc(469)] failed to stat report
