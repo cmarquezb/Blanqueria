@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -25,6 +27,8 @@ import { MylocationComponent } from './todo/mylocation/mylocation.component';
 import { AddComponent } from './todo/productos/add/add.component';
 import { EditComponent } from './todo/productos/edit/edit.component';
 import { ViewComponent } from './todo/productos/view/view.component';
+import { from } from 'rxjs';
+import { ShoppingComponent } from './todo/shopping/shopping.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +44,8 @@ import { ViewComponent } from './todo/productos/view/view.component';
     MylocationComponent,
     AddComponent,
     EditComponent,
-    ViewComponent
+    ViewComponent,
+    ShoppingComponent
   ],
   imports: [
     BrowserModule,
@@ -54,9 +59,13 @@ import { ViewComponent } from './todo/productos/view/view.component';
     TypeaheadModule.forRoot(),
     BsDatepickerModule.forRoot(),
     BsDropdownModule.forRoot(),
-    SortableModule.forRoot()
+    SortableModule.forRoot(),
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
