@@ -10,7 +10,7 @@ const connection = mysql.createConnection({
   database : 'blanqueria'
 });
 connection.connect();
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3000;
 const app = express()
   .use(cors())
   .use(bodyParser.json())
