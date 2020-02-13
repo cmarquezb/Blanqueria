@@ -30,6 +30,7 @@
     "font-awesome": "^4.7.0",
     "jquery": "^3.4.1",
     "ngx-bootstrap": "^5.3.2",
+    "ngx-filter-pipe": "^2.1.2",
     "ngx-light-carousel": "^1.0.37-beta.8",
     "ngx-owl-carousel": "^2.0.7",
     "popper.js": "^1.16.1",
