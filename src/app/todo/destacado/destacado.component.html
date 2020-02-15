@@ -1,22 +1,91 @@
-<div class="col-md-3" *ngFor="let articulo of result">    
-    <div class="cart-content d-flex">
-        <!-- Cart List Area -->
-        <div class="cart-list">
-            <!-- Single Cart Item -->
-            <div class="single-cart-item">
-                <a href="#" class="product-image">
-                    <img src="{{articulo.ruta}}{{articulo.nom_imgagen}}" style="width: 200px; height: 200px;" alt="">
-                    <!-- Cart Item Desc --> 
-                    <div class="cart-item-desc">
-                        <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
-                        <span class="badge">{{articulo.nom_tipo_prod}}</span>
-                        <h6>{{articulo.nom_marca}}-{{articulo.nom_modelo}}</h6>
-                        <p class="size">Size: {{articulo.largo}}x{{articulo.ancho}}</p>
-                        <p class="color">Desc: {{articulo.material_interno}} </p>
-                        <p class="price">${{articulo.precio_sugerido}}</p>
-                    </div>
-                </a>
+<div class="row-1">
+    <h4 class="text-center">PRODUCTOS DESTACADOS</h4>  
+    <div class="card-deck col-12">    
+        <div class="card" style="width: 18rem; height: 25rem;" *ngFor="let articulo of result">
+            <img class="card-img-top" style="width:160px; height:160px; align-self: center;"  src="{{articulo.ruta}}{{articulo.nom_imgagen}}" alt="Card image cap">
+            <div class="card-body">
+                <h6 class="card-title text-center">{{articulo.nom_tipo_prod}}</h6>
+                <h6 class="card-text text-center"><small>{{articulo.nom_marca}}-{{articulo.nom_modelo}}</small></h6>     
             </div>
-        </div>    
+            <div>
+                <p class="card-text"><small>Desc: {{articulo.material_interno}}</small></p>
+            </div>
+            <div>
+                <p class="price text-center"><strong>${{articulo.precio_sugerido/1000}}</strong></p>  
+            </div>
+            <div class="card-footer">
+                <a href="#" class="btn btn-primary">Ver detalle</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Ak solo los tipos de productos-->
+<div class="row-1">
+    <h4 class="text-center">CATEGORIAS</h4>
+    <div class="card-deck col-12">     
+        <div class="card" style="width: 18rem; height: 25rem;">
+            <img class="card-img-top" style="width:160px; height:160px; align-self: center;"  src="/assets/images/colchon001.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title text-center">Colchones</h5>
+                <p class="card-text text-center">Suavidad, confort, son algunas de sus características</p>  
+            </div>
+            <div class="card-footer">
+                <a href="#" class="btn btn-primary">Ver detalle</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem; height: 25rem;">
+            <img class="card-img-top" style="width:160px; height:160px; align-self: center;" src="/assets/images/047-3.jpg" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title text-center">Conjuntos</h5>
+            <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            
+            </div>
+            <div class="card-footer">
+                <a href="#" class="btn btn-primary">Ver detalle</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem; height: 25rem;">
+            <img class="card-img-top" style="width:160px; height:160px; align-self: center;" src="/assets/images/017.jpg" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title text-center">Sábanas</h5>
+            <p class="card-text text-center">De la marca Piero, suavidad, confort, resortes.</p>
+            
+            </div>
+            <div class="card-footer">
+                <a href="#" class="btn btn-primary">Ver detalle</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem; height: 25rem;">
+            <img class="card-img-top" style="width:160px; height:160px; align-self: center;"  src="/assets/images/046-2.jpg" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title text-center">Cubre Camas</h5>
+            <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>   
+            </div>
+            <div class="card-footer">
+                <a href="#" class="btn btn-primary">Ver detalle</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem; height: 25rem;">
+            <img class="card-img-top" style="width:160px; height:160px; align-self: center;"  src="/assets/images/035-2.jpg" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title text-center">Toallas</h5>
+            <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            
+            </div>
+            <div class="card-footer">
+                <a href="#" class="btn btn-primary">Ver detalle</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem; height: 25rem;">
+            <img class="card-img-top" style="width:160px; height:160px; align-self: center;"  src="/assets/images/019.jpg" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title text-center">Almohadas</h5>
+            <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            
+            </div>
+            <div class="card-footer">
+                <a href="#" class="btn btn-primary">Ver detalle</a>
+            </div>
+        </div>
     </div>
 </div>

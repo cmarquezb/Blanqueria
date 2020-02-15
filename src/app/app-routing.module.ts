@@ -15,7 +15,7 @@ const routes: Routes = [
   {path:'envio', component:EnvioComponent},
   {path:'location', component:MylocationComponent},
   {path:'contact', component:MycontactComponent},
-  {path:'productos', component:ShoppingComponent},
+  {path:'shopping', component:ShoppingComponent},
   {path: "**", pathMatch: "full", redirectTo: ""}
 
 ];
