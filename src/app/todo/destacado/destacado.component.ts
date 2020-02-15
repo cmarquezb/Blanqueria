@@ -28,5 +28,5 @@ export class DestacadoComponent implements OnInit {
  
   ngOnInit() {    
    }
-
+ 
 }

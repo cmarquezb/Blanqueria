@@ -6,6 +6,7 @@ import { MycontactComponent } from './todo/mycontact/mycontact.component';
 import { MyproductComponent } from './todo/myproduct/myproduct.component';
 import { MylocationComponent } from './todo/mylocation/mylocation.component';
 import { ShoppingComponent } from './todo/shopping/shopping.component';
+import { DetalleproductoComponent} from './todo/detalleproducto/detalleproducto.component';
 //import { from } from 'rxjs';
 
 
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path:'location', component:MylocationComponent},
   {path:'contact', component:MycontactComponent},
   {path:'shopping', component:ShoppingComponent},
+  {path:'detalle/:id', component:DetalleproductoComponent},
   {path: "**", pathMatch: "full", redirectTo: ""}
 
 ];

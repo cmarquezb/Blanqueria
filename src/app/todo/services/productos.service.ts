@@ -20,5 +20,9 @@ export class ProductosService {
     return this.http.get(`${this.Myapi_URI}/articulos/${id}`);
   } 
 
+  getModeloProduct(id: string): Observable<any> {
+    return this.http.get(`${this.Myapi_URI}/articulos/FilModelo/${id}`);
+  } 
+
 } 
     

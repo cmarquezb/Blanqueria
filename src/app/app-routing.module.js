@@ -13,13 +13,14 @@ var envio_component_1 = require("./todo/envio/envio.component");
 var mycontact_component_1 = require("./todo/mycontact/mycontact.component");
 var mylocation_component_1 = require("./todo/mylocation/mylocation.component");
 var shopping_component_1 = require("./todo/shopping/shopping.component");
+
 var routes = [
     { path: '', component: myhome_component_1.MyhomeComponent },
     // {path:'productos', component:MyproductComponent},
     { path: 'envio', component: envio_component_1.EnvioComponent },
     { path: 'location', component: mylocation_component_1.MylocationComponent },
     { path: 'contact', component: mycontact_component_1.MycontactComponent },
-    { path: 'productos', component: shopping_component_1.ShoppingComponent },
+    { path: 'productos', component: shopping_component_1.ShoppingComponent },    
     { path: "**", pathMatch: "full", redirectTo: "" }
 ];
 var AppRoutingModule = /** @class */ (function () {
