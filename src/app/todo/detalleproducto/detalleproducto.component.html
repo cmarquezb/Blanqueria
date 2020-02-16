@@ -1,15 +1,24 @@
+<div class="row" *ngFor="let articulo of arrayproductos; let i=index">
+    
+        <div class="row">
+            <div class="col-4">
+                <img class="img-responsive" src="{{articulo.ruta}}{{articulo.nom_imgagen}}" style="width: 100%; height: 400px; align-self: center;" alt="">
+            </div>
+            <div class="col-8">
+                <h3><a href="">{{articulo.nom_tipo_prod}}</a></h3>
+                <h4><small>{{articulo.nom_marca}}-{{articulo.nom_modelo}}</small></h4>
+                <p>Desc-{{articulo.idproducto}}: {{articulo.material_externo}}</p>
+                <p>Características: {{articulo.material_interno}}</p>
+                <p>Det. Adicional: {{articulo.descripcion_adicional}}</p>
+                <p>Alto: {{articulo.alto}} x Ancho: {{articulo.ancho}} x Largo: {{articulo.largo}}</p>
+                <p>Garantia: {{articulo.garantia}}</p>
+                <p>Precio: <strong>$ {{articulo.precio_sugerido/1000}}</strong></p>  
+                <a href="#" class="btn btn-primary" [routerLink]="['detalle',articulo.idproducto]">Comprar</a>   
+            </div>            
+        </div>              
+</div>
 
-<div class="card" style="width: 18rem; height: 25rem;" *ngFor="let articulo of arrayproductos; let i=index">
-    <img class="card-img-top" style="width:160px; height:160px; align-self: center;"  src="{{articulo.ruta}}{{articulo.nom_imgagen}}" alt="Card image cap">
-    <div class="card-body">
-        <h6 class="card-title text-center">{{articulo.nom_tipo_prod}}</h6>
-        <h6 class="card-text text-center"><small>{{articulo.nom_marca}}-{{articulo.nom_modelo}}</small></h6>     
-    </div>
-    <div>
-        <p class="card-text"><small>Desc-{{articulo.idproducto}}: {{articulo.material_interno}}</small></p>
-    </div>
-    <div>
-        <p class="price text-center"><strong>${{articulo.precio_sugerido/1000}}</strong></p>  
-    </div>  
-</div>          
+<app-foot></app-foot>
 
+
+  

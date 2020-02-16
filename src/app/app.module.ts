@@ -34,6 +34,10 @@ import { ShoppingComponent } from './todo/shopping/shopping.component';
 import { ProductosService } from './todo/services/productos.service';
 import { DetalleproductoComponent } from './todo/detalleproducto/detalleproducto.component';
 import { DestacadoComponent } from './todo/destacado/destacado.component';
+import { MymarcaComponent } from './todo/mymarca/mymarca.component';
+import { MymodeloComponent } from './todo/mymodelo/mymodelo.component';
+import { MymaterialComponent } from './todo/mymaterial/mymaterial.component';
+import { MytiposComponent } from './todo/mytipos/mytipos.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +55,11 @@ import { DestacadoComponent } from './todo/destacado/destacado.component';
     ViewComponent,
     ShoppingComponent,
     DetalleproductoComponent,
-    DestacadoComponent
+    DestacadoComponent,
+    MymarcaComponent,
+    MymodeloComponent,
+    MymaterialComponent,
+    MytiposComponent
   ],
   imports: [
     BrowserModule,

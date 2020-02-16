@@ -2,10 +2,6 @@ import { Component, OnInit, HostBinding} from '@angular/core';
 import { ProductosService} from '../services/productos.service';
 import { Router, ActivatedRoute} from '@angular/router';
 
-
-
-
-
 @Component({
   selector: 'app-detalleproducto',
   templateUrl: './detalleproducto.component.html',
@@ -19,10 +15,6 @@ export class DetalleproductoComponent implements OnInit {
     arrayproductos: any = [];
     
     constructor(private router: Router, private list_producto: ProductosService, private route: ActivatedRoute) { 
-      
-    }
-   
-    ngOnInit() { 
       this.route.params.subscribe(params => {
         if(params['id']!=null){
             var id = params['id'];
@@ -34,8 +26,10 @@ export class DetalleproductoComponent implements OnInit {
           },
           err => console.error(err)
         );
-     });    
-
-     }
-     
+      });   
+    }
+   
+    ngOnInit() { 
+         
+     }   
   }
