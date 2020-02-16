@@ -38,6 +38,12 @@ import { MymarcaComponent } from './todo/mymarca/mymarca.component';
 import { MymodeloComponent } from './todo/mymodelo/mymodelo.component';
 import { MymaterialComponent } from './todo/mymaterial/mymaterial.component';
 import { MytiposComponent } from './todo/mytipos/mytipos.component';
+import { ColchonesComponent } from './todo/colchones/colchones.component';
+import { SabanasComponent } from './todo/sabanas/sabanas.component';
+import { ToallasComponent } from './todo/toallas/toallas.component';
+import { CubrecamasComponent } from './todo/cubrecamas/cubrecamas.component';
+import { AlmohadasComponent } from './todo/almohadas/almohadas.component';
+import { ConjuntosComponent } from './todo/conjuntos/conjuntos.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +65,13 @@ import { MytiposComponent } from './todo/mytipos/mytipos.component';
     MymarcaComponent,
     MymodeloComponent,
     MymaterialComponent,
-    MytiposComponent
+    MytiposComponent,
+    ColchonesComponent,
+    SabanasComponent,
+    ToallasComponent,
+    CubrecamasComponent,
+    AlmohadasComponent,
+    ConjuntosComponent
   ],
   imports: [
     BrowserModule,
