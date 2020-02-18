@@ -9,7 +9,7 @@ import { Observable, of } from 'rxjs';
 export class ProductosService {
 
   Myapi_URI='http://localhost:3000/castelapi';
-  
+  //Myapi_URI='http://localhost:3306/castelapi';
   constructor(private http: HttpClient) { }
  
   getAllProducts(): any {

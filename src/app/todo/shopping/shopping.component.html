@@ -21,7 +21,7 @@
             <div class="card-deck col-12"> 
                 <div class="card-group"  style="width: 16rem; height: 25rem;" *ngFor="let articulo of arrayproductos[0] | paginate: {itemsPerPage: 8, currentPage: p}">
                     <div class="card">
-                        <img class="card-img-top" style="width:160px; height:160px; align-self: center;"  src="{{articulo.ruta}}{{articulo.nom_imgagen}}" alt="Card image cap">
+                        <img class="card-img-top" style="width:160px; height:160px; align-self: center;"  src="/assets/images/{{articulo.nom_imgagen}}" alt="Card image cap">
                         <div class="card-body">
                             <h6 class="card-title text-center">{{articulo.nom_tipo_prod}}</h6>
                             <h6 class="card-text text-center"><small>{{articulo.nom_marca}}-{{articulo.nom_modelo}}</small></h6>     
