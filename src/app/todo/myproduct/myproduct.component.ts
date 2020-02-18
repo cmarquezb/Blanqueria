@@ -14,7 +14,7 @@ export class MyproductComponent implements OnInit {
   @HostBinding('class') classes = 'row';
 
   arrayproductos: any = [];
-
+  p : number = 1;
   constructor(private router: Router, private list_producto: ProductosService) { }
  
   ngOnInit() {

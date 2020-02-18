@@ -1,1 +1,46 @@
-<p>toallas works!</p>
+ <!-- ##### Shop Grid Area Start ##### -->
+ <div class="container-fluid">
+    <div class="row">
+        <div class="col-2 collapse show d-md-flex bg-light pt-2 pl-0 min-vh-100">            
+            <nav class="nav flex-column  menusito">
+                <a class="nav-link active" href="#" [routerLink]="['/shopping']">Todos</a>
+                <a class="nav-link" href="#" [routerLink]="['/almohadas',1]">Almohadas</a>                
+                <a class="nav-link" href="#" [routerLink]="['/colchones',2]">Colchones</a>
+                <a class="nav-link" href="#" [routerLink]="['/conjuntos',3]">Conjuntos</a>
+                <a class="nav-link" href="#" [routerLink]="['/cubrecamas',7]">Cubracamas</a>
+                <a class="nav-link" href="#" [routerLink]="['/sabanas',4]">Sábanas</a>                
+                <a class="nav-link" href="#" [routerLink]="['/toallas',5]">Toallas</a>                
+            </nav>       
+        </div>
+        <div class="col pt-2">
+            <div class="col-12">
+                <div class="page-title text-center">
+                    <h3 style="color: #a4b4e4;">Toallas</h3>
+                </div>
+            </div>
+            <div class="card-deck col-12"> 
+                <div class="card-group"  style="width: 16rem; height: 25rem;" *ngFor="let articulo of arrayproductos | paginate: {itemsPerPage: 8, currentPage: p}">     
+                    <div class="card">
+                        <img class="card-img-top" style="width:160px; height:160px; align-self: center;"  src="{{articulo.ruta}}{{articulo.nom_imgagen}}" alt="Card image cap">
+                        <div class="card-body">
+                            <h6 class="card-title text-center">{{articulo.nom_tipo_prod}}</h6>
+                            <h6 class="card-text text-center"><small>{{articulo.nom_marca}}-{{articulo.nom_modelo | truncate: 15}}:{{articulo.largo}}x{{articulo.ancho}}</small></h6>     
+                        </div>
+                        <div>
+                            <p class="card-text"><small>Desc: {{articulo.material_interno | truncate: 50}}</small></p>
+                        </div>
+                        <div>
+                            <p class="price text-center"><strong>${{articulo.precio_sugerido/1000}}</strong></p>  
+                        </div>            
+                        <div class="card-footer">                
+                            <a href="#" class="btn btn-primary" [routerLink]="['/detalle',articulo.idproducto]">Ver detalle</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+    </div>
+    <div class="col-12"></div>
+ </div>
+ <app-foot></app-foot>

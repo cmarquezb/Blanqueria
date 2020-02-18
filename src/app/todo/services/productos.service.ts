@@ -23,6 +23,16 @@ export class ProductosService {
   getModeloProduct(id: string): Observable<any> {
     return this.http.get(`${this.Myapi_URI}/articulos/FilModelo/${id}`);
   } 
+  getMarcaProduct(id: string): Observable<any> {
+    return this.http.get(`${this.Myapi_URI}/articulos/FilMarca/${id}`);
+  } 
+  getcategoriaProduct(id: string): Observable<any> {
+    return this.http.get(`${this.Myapi_URI}/articulos/FilTipos/${id}`);
+  } 
+
+  getMaterialProduct(id: string): Observable<any> {
+    return this.http.get(`${this.Myapi_URI}/articulos/FilMaterial/${id}`);
+  } 
 
 } 
     

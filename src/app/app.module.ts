@@ -16,6 +16,7 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { SortableModule } from 'ngx-bootstrap/sortable';
 import { FilterPipeModule } from 'ngx-filter-pipe';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { MyhomeComponent } from './todo/myhome/myhome.component';
 import { MyformComponent } from './todo/myform/myform.component';
@@ -44,6 +45,7 @@ import { ToallasComponent } from './todo/toallas/toallas.component';
 import { CubrecamasComponent } from './todo/cubrecamas/cubrecamas.component';
 import { AlmohadasComponent } from './todo/almohadas/almohadas.component';
 import { ConjuntosComponent } from './todo/conjuntos/conjuntos.component';
+import { TruncatePipe } from './truncate.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,7 +73,8 @@ import { ConjuntosComponent } from './todo/conjuntos/conjuntos.component';
     ToallasComponent,
     CubrecamasComponent,
     AlmohadasComponent,
-    ConjuntosComponent
+    ConjuntosComponent,
+    TruncatePipe 
   ],
   imports: [
     BrowserModule,
@@ -88,7 +91,8 @@ import { ConjuntosComponent } from './todo/conjuntos/conjuntos.component';
     SortableModule.forRoot(),
     FormsModule,
     HttpClientModule,
-    FilterPipeModule 
+    FilterPipeModule,
+    NgxPaginationModule 
   ],
   providers: [
     ProductosService

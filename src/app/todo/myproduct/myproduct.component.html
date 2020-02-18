@@ -1,5 +1,4 @@
- 
-<div class="col-md-3" *ngFor="let articulo of arrayproductos[0]">    
+<div class="col-md-3" *ngFor="let articulo of arrayproductos[0] | paginate: {itemsPerPage: 8, currentPage: p}">    
     <div class="cart-content d-flex">
         <!-- Cart List Area  probar | orderBy:'name':true" -->
         <div class="cart-list">
@@ -16,8 +15,12 @@
                         <p class="color">Desc: {{articulo.material_interno}} </p>
                         <p class="price">${{articulo.precio_sugerido}}</p>
                     </div>
+                    <div>
+                        <a href="#" class="btn btn-primary" [routerLink]="">Comprar Mercado libre</a> 
+                    </div>
                 </a>
             </div>
         </div>    
     </div>
 </div>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
