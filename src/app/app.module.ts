@@ -46,6 +46,14 @@ import { CubrecamasComponent } from './todo/cubrecamas/cubrecamas.component';
 import { AlmohadasComponent } from './todo/almohadas/almohadas.component';
 import { ConjuntosComponent } from './todo/conjuntos/conjuntos.component';
 import { TruncatePipe } from './truncate.pipe';
+import { PromocionesService } from './todo/services/promociones.service';
+import { PromocionesComponent} from './todo/promociones/promociones.component';
+import { from } from 'rxjs';
+/*
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from 'src/environments/environment';*/
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -74,7 +82,9 @@ import { TruncatePipe } from './truncate.pipe';
     CubrecamasComponent,
     AlmohadasComponent,
     ConjuntosComponent,
-    TruncatePipe 
+    PromocionesComponent,
+    TruncatePipe
+    
   ],
   imports: [
     BrowserModule,
@@ -93,9 +103,13 @@ import { TruncatePipe } from './truncate.pipe';
     HttpClientModule,
     FilterPipeModule,
     NgxPaginationModule 
+    /*,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule*/
   ],
   providers: [
-    ProductosService
+    ProductosService,
+    PromocionesService
   ],
   bootstrap: [AppComponent]
 })

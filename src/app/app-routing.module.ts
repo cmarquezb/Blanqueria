@@ -13,6 +13,8 @@ import { ConjuntosComponent } from './todo/conjuntos/conjuntos.component';
 import { CubrecamasComponent } from './todo/cubrecamas/cubrecamas.component';
 import { SabanasComponent } from './todo/sabanas/sabanas.component';
 import { ToallasComponent } from './todo/toallas/toallas.component';
+import { PromocionesComponent } from './todo/promociones/promociones.component';
+
 //import { from } from 'rxjs';
 
 
@@ -30,6 +32,7 @@ const routes: Routes = [
   {path:'cubrecamas/:id', component:CubrecamasComponent},
   {path:'sabanas/:id', component:SabanasComponent},
   {path:'toallas/:id', component:ToallasComponent},
+  {path:'promociones', component:PromocionesComponent},
   {path: "**", pathMatch: "full", redirectTo: ""}
 
 ];

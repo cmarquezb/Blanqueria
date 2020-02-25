@@ -4,6 +4,16 @@
 
 export const environment = {
   production: false
+ /* firebase : {
+    apiKey: "AIzaSyCJaVzR75bVXQjd9NMbpwGZyfwTYPmE0jo",
+    authDomain: "miblanqueria-a824b.firebaseapp.com",
+    databaseURL: "https://miblanqueria-a824b.firebaseio.com",
+    projectId: "miblanqueria-a824b",
+    storageBucket: "miblanqueria-a824b.appspot.com",
+    messagingSenderId: "37598381806",
+    appId: "1:37598381806:web:31678c663627ba1ef895ff",
+    measurementId: "G-BYXYHWC2YG"
+  }*/
 };
 
 /*

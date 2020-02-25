@@ -10,6 +10,25 @@
     justify-content: center;
 }
 .menusito{
-    padding-left: 10px;
-    font-size: 18px;
+    padding: 5px 15px;
+    padding-left: 15px;
+    font-family: "Newborough", Arial, Helvetica, sans-serif; 
+    font-size: 24px;
+    display: block;
+    position: absolute;
 }
+
+ul, ol{
+    list-style: none;
+}
+
+
+.nav li a:hover{
+    background-color: rgb(226, 230, 236); 
+}
+
+
+
+
+
+
