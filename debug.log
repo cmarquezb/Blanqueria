@@ -245,3 +245,6 @@
 [0226/045947.517:ERROR:crash_report_database_win.cc(469)] failed to stat report
 [0226/051447.518:ERROR:crash_report_database_win.cc(469)] failed to stat report
 [0226/052947.518:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0226/054447.518:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0226/055947.535:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0226/061447.536:ERROR:crash_report_database_win.cc(469)] failed to stat report
