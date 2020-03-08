@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,7 +32,7 @@ import { MylocationComponent } from './todo/mylocation/mylocation.component';
 import { AddComponent } from './todo/productos/add/add.component';
 import { EditComponent } from './todo/productos/edit/edit.component';
 import { ViewComponent } from './todo/productos/view/view.component';
-//import { from } from 'rxjs';
+
 import { ShoppingComponent } from './todo/shopping/shopping.component';
 import { ProductosService } from './todo/services/productos.service';
 import { DetalleproductoComponent } from './todo/detalleproducto/detalleproducto.component';
@@ -83,8 +85,7 @@ import { environment } from 'src/environments/environment';*/
     AlmohadasComponent,
     ConjuntosComponent,
     PromocionesComponent,
-    TruncatePipe
-    
+    TruncatePipe    
   ],
   imports: [
     BrowserModule,
@@ -102,7 +103,8 @@ import { environment } from 'src/environments/environment';*/
     FormsModule,
     HttpClientModule,
     FilterPipeModule,
-    NgxPaginationModule 
+    NgxPaginationModule,
+    ReactiveFormsModule 
     /*,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule*/

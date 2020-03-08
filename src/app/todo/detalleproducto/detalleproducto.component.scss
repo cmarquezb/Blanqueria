@@ -1,0 +1,19 @@
+#show,#hide {
+	display:none;
+}
+
+div#content {
+	display:none;
+  padding:20px;
+  background-color:#f6f6f6;
+  width:100%;
+  cursor:pointer;
+}
+
+input#show:checked ~ div#content {
+	display:block;
+}
+
+input#hide:checked ~ div#content {
+	display:none;
+}

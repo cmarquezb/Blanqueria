@@ -6,7 +6,7 @@
             <img src="/assets/images/avatar0.png"/>  
             <legend class="text-center user-header">Contacto</legend>           
         </div>        
-        <form class="col-12 form-horizontal user-form" method="post">                                       
+        <form class="col-12 form-horizontal user-form" [formGroup]="userEmails" method="post">                                       
             <div class="form-group" id="user1-group">   
                 <i class="fa fa-user user1-group"></i>                  
                 <input id="fname" name="name" type="text" placeholder="Nombre" class="form-control">  
@@ -17,7 +17,7 @@
             </div>
             <div class="form-group" id="user3-group">  
                 <i class="fa fa-envelope user3-group"></i>                 
-                <input id="email" name="email" type="text" placeholder="Email" class="form-control">
+                <input id="email" name="email" type="email" placeholder="Email" class="form-control"  formControlName="primaryEmail">
             </div>
             <div class="form-group" id="user4-group">    
                 <i class="fa fa-phone-square user4-group"></i>                   
