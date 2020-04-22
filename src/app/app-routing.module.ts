@@ -14,6 +14,7 @@ import { CubrecamasComponent } from './todo/cubrecamas/cubrecamas.component';
 import { SabanasComponent } from './todo/sabanas/sabanas.component';
 import { ToallasComponent } from './todo/toallas/toallas.component';
 import { PromocionesComponent } from './todo/promociones/promociones.component';
+import { MyformComponent} from './todo/myform/myform.component';
 
 //import { from } from 'rxjs';
 
@@ -33,6 +34,7 @@ const routes: Routes = [
   {path:'sabanas/:id', component:SabanasComponent},
   {path:'toallas/:id', component:ToallasComponent},
   {path:'promociones', component:PromocionesComponent},
+  {path:'ventas/:id', component:MyformComponent},
   {path: "**", pathMatch: "full", redirectTo: ""}
 
 ];

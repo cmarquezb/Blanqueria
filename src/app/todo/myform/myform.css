@@ -1,16 +1,5 @@
-.contact {
-    /* The image used */
-    margin:0 auto;
-    background: url("../../../assets/call-center.jpg");
-    /* Full height */
-    height: 100%;
-    width: 100%;
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; 
 
-}
+
 
 .form-right input[type="text"],
 .form-right input[type="email"],

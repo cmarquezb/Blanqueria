@@ -47,7 +47,7 @@
                             <p class="card-text"><small>Desc: {{articulo.material_interno | slice:0:120}}...</small></p>
                         </div>
                         <div>
-                            <p class="price text-center"><strong>${{articulo.precio_sugerido}}</strong></p>  
+                            <p class="price text-center"><strong>${{articulo.valor_unitario}}</strong></p>  
                         </div>            
                         <div class="card-footer">                
                             <a href="#" class="btn btn-primary" [routerLink]="['/detalle',articulo.idproducto]">Ver detalle</a>

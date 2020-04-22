@@ -85,6 +85,7 @@ import { environment } from 'src/environments/environment';*/
     AlmohadasComponent,
     ConjuntosComponent,
     PromocionesComponent,
+    MyformComponent,
     TruncatePipe    
   ],
   imports: [
