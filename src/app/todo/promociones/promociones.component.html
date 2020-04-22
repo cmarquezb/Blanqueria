@@ -36,7 +36,7 @@
                 </div>
             </div>
             <div class="card-deck col-12"> 
-                <div class="card-group"  style="width: 16rem; height: 25rem;" *ngFor="let articulo of arrayproductos[0] | paginate: {itemsPerPage: 8, currentPage: p}">     
+                <div class="card-group"  style="width: 16rem; height: 25rem;" *ngFor="let articulo of result | paginate: {itemsPerPage: 8, currentPage: p}">
                     <div class="card">
                         <img class="card-img-top" style="width:160px; height:160px; align-self: center;"  src="/assets/images/{{articulo.nom_imgagen}}" alt="Card image cap">
                         <div class="card-body">
@@ -44,10 +44,10 @@
                             <h6 class="card-text text-center"><small>{{articulo.nom_marca}}-{{articulo.nom_modelo | truncate: 15}}:{{articulo.largo}}x{{articulo.ancho}}</small></h6>     
                         </div>
                         <div>
-                            <p class="card-text"><small>Desc: {{articulo.material_interno | truncate: 5}}...</small></p>
+                            <p class="card-text"><small>Desc: {{articulo.material_interno | slice:0:120}}...</small></p>
                         </div>
                         <div>
-                            <p class="price text-center"><strong>${{articulo.valor_unitario}}</strong></p>  
+                            <p class="price text-center"><strong>${{articulo.precio_sugerido}}</strong></p>  
                         </div>            
                         <div class="card-footer">                
                             <a href="#" class="btn btn-primary" [routerLink]="['/detalle',articulo.idproducto]">Ver detalle</a>

@@ -13,11 +13,11 @@ export class PromocionesService {
   constructor(private http: HttpClient) { }
  
   getAllProductsp(): any {
-    return this.http.get(`${this.Myapi_URI}/promociones`);
+    return this.http.get(`${this.Myapi_URI}/articulos`);
   }
 
-  getSingleProductp(id: string): Observable<any> {
-    return this.http.get(`${this.Myapi_URI}/promociones/${id}`);
+  getSingleProductsp(id: string): Observable<any> {
+    return this.http.get(`${this.Myapi_URI}/articulos/${id}`);
   } 
 
 } 
