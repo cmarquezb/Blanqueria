@@ -8,8 +8,8 @@ import { Observable, of } from 'rxjs';
 })
 export class PromocionesService {
 
+  //Myapi_URI='http://45.79.163.44:3000/castelapi';
   Myapi_URI='http://localhost:3000/castelapi';
-  //Myapi_URI='http://localhost:3306/castelapi';
   constructor(private http: HttpClient) { }
  
   getAllProductsp(): any {

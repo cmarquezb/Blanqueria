@@ -6,12 +6,12 @@
             <div class="col-8">                
                     <h3><a href="">{{articulo.nom_tipo_prod}}</a></h3>
                     <h4><small>{{articulo.nom_marca}}-{{articulo.nom_modelo}}</small></h4>
-                    <p>Desc-{{articulo.idproducto}}: {{articulo.material_externo}}</p>
+                    <p>Desc-{{articulo.idproducto}}: {{articulo.material_externo}}</p>                   
                     <p>Características: {{articulo.material_interno}}</p>
                     <p>Det. Adicional: {{articulo.descripcion_adicional}}</p>
                     <p>Alto: {{articulo.alto}} x Ancho: {{articulo.ancho}} x Largo: {{articulo.largo}}</p>
                     <p>Garantia: {{articulo.garantia}}</p>
-                    <p>Precio: <strong>$ {{articulo.precio_sugerido/1000}}</strong></p> 
+                    <p>Precio: <strong>$ {{articulo.valor_unitario}}</strong></p> 
                     <a href="#" class="btn btn-primary" [routerLink]="">Comprar Mercado libre</a>
                     <label for="show">
                         <span><i class="fa fa-money"><strong><u>Condiciones de Pago</u></strong></i></span>
@@ -30,7 +30,8 @@
         </div>                      
 </div>   
 
-<app-foot></app-foot>
+<app-myabout></app-myabout>
+<app-foot class="container-fluid"></app-foot>
 
 
   

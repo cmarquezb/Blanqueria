@@ -31,4 +31,3 @@ export class SabanasComponent implements OnInit {
   }
 
 }
-

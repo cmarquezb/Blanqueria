@@ -9,15 +9,24 @@
         <form class="col-12 form-horizontal user-form" [formGroup]="userEmails" method="post">                                       
             <div class="form-group" id="user1-group">   
                 <i class="fa fa-user user1-group"></i>                  
-                <input id="fname" name="name" type="text" placeholder="Nombre" class="form-control">  
+                <input id="fname" name="name" type="text" placeholder="Nombre" class="form-control" required>  
             </div>
             <div class="form-group" id="user2-group">  
                 <i class="fa fa-user-plus user2-group"></i>                                   
-                <input id="lname" name="name" type="text" placeholder="Apellido" class="form-control">
+                <input id="lname" name="name" type="text" placeholder="Apellido" class="form-control" required>
             </div>
             <div class="form-group" id="user3-group">  
                 <i class="fa fa-envelope user3-group"></i>                 
-                <input id="email" name="email" type="email" placeholder="Email" class="form-control"  formControlName="primaryEmail">
+                <input input [class.is-invalid] = "userEmails.get('primaryEmail').invalid && userEmails.get('primaryEmail').touched" id="email" name="email" type="email" placeholder="Email" class="form-control"  formControlName="primaryEmail">
+                <div *ngIf="(primEmail.invalid && primEmail.touched) || primEmail.dirty">
+                    <small *ngIf="primEmail.errors?.required" class="text-warning">
+                    Correo electr&oacute;nico es requerido
+                </small>
+                    <!--question mark(?) is a safe navigation operator-->
+                    <small *ngIf="primEmail.errors?.pattern" class="text-warning">
+                    Favor ingresar una direcci&oacute;n de correo v&aacute;lida
+                </small>
+              </div>        
             </div>
             <div class="form-group" id="user4-group">    
                 <i class="fa fa-phone-square user4-group"></i>                   
@@ -33,4 +42,5 @@
 </div>
 </div>
 
-<app-foot></app-foot>
+<app-myabout></app-myabout>
+<app-foot class="container-fluid"></app-foot>

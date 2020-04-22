@@ -44,10 +44,10 @@
                             <h6 class="card-text text-center"><small>{{articulo.nom_marca}}-{{articulo.nom_modelo | truncate: 15}}:{{articulo.largo}}x{{articulo.ancho}}</small></h6>     
                         </div>
                         <div>
-                            <p class="card-text"><small>Desc: {{articulo.material_interno | truncate: 50}}</small></p>
+                            <p class="card-text"><small>Desc: {{articulo.material_interno | truncate: 5}}...</small></p>
                         </div>
                         <div>
-                            <p class="price text-center"><strong>${{articulo.precio_sugerido/1000}}</strong></p>  
+                            <p class="price text-center"><strong>${{articulo.valor_unitario}}</strong></p>  
                         </div>            
                         <div class="card-footer">                
                             <a href="#" class="btn btn-primary" [routerLink]="['/detalle',articulo.idproducto]">Ver detalle</a>
