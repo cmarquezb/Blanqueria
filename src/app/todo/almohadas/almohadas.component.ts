@@ -15,9 +15,9 @@ export class AlmohadasComponent implements OnInit {
   constructor(private router: Router, private list_producto: ProductosService, private route: ActivatedRoute) { 
     this.route.params.subscribe(params => {
       if(params['id']!=null){
-          var id = params['id'];
+          var id = params['id'];          
       }  
-      this.list_producto.getcategoriaProduct(id).subscribe(
+      this.list_producto.getSingleProduct(id).subscribe(
         res => {
           console.log(res);
           this.arrayproductos = res;

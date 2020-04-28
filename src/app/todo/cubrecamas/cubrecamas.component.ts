@@ -17,7 +17,7 @@ export class CubrecamasComponent implements OnInit {
       if(params['id']!=null){
           var id = params['id'];
       }  
-      this.list_producto.getcategoriaProduct(id).subscribe(
+      this.list_producto.getSingleProduct(id).subscribe(
         res => {
           console.log(res);
           this.arrayproductos = res;
