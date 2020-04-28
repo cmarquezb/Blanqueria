@@ -1,7 +1,7 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
-import { ProductosService } from '../services/productos.service';
-import { Router } from '@angular/router';
-import { FilterPipe } from 'ngx-filter-pipe';
+import { PromocionesService } from '../services/promociones.service';
+import { Router, ActivatedRoute } from '@angular/router';
+//import { FilterPipe } from 'ngx-filter-pipe';
 
 @Component({
   selector: 'app-destacado',
@@ -12,15 +12,14 @@ export class DestacadoComponent implements OnInit {
 
   @HostBinding('class') classes = 'row';
 
-  arrayproductos: any = [];
-  result : any = [];
+  arrayproductos: any = [];  
  
-  constructor(private router: Router, private list_producto: ProductosService, private filter: FilterPipe) { 
-    this.list_producto.getAllProducts().subscribe(
+  constructor(private router: Router, private list_producto: PromocionesService) { 
+    //, private filter: FilterPipe
+    this.list_producto.getSingleProductsp().subscribe(
       res => {
-        this.arrayproductos = res;
-        this.result = this.filter.transform(this.arrayproductos[0], { oferta: '1' });
-        console.log(this.result);
+        this.arrayproductos = res;        
+        console.log(this.arrayproductos);
       },
       err => console.error(err)
     );
