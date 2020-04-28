@@ -20,6 +20,10 @@ export class ProductosService {
     return this.http.get(`${this.Myapi_URI}/articulos/${id}`);
   } 
 
+  getOneProduct(id: string): Observable<any> {
+    return this.http.get(`${this.Myapi_URI}/articulos/one/${id}`);
+  } 
+
   getModeloProduct(id: string): Observable<any> {
     return this.http.get(`${this.Myapi_URI}/articulos/FilModelo/${id}`);
   } 

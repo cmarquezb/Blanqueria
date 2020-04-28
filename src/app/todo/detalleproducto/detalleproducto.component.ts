@@ -19,7 +19,7 @@ export class DetalleproductoComponent implements OnInit {
         if(params['id']!=null){
             var id = params['id'];
         }  
-        this.list_producto.getSingleProduct(id).subscribe(
+        this.list_producto.getOneProduct(id).subscribe(
           res => {
             console.log(res);
             this.arrayproductos = res;
