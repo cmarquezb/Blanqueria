@@ -6,22 +6,28 @@
                 <legend class="text-center user-header">Solicitud del Producto cod.: {{articulo.idproducto}}</legend>           
             </div> 
             <form (ngSubmit)="contactForm(form.value)" #form="ngForm">
-                <div class="form-group">
-                <label>Nombre</label>
-                <input type="text" class="form-control" name="nombre" ngModel>
+                <div class="form-group" id="user-group">                     
+                    <input type="text" hidden="true" disabled="true" class="form-control" id="codigop" name="codigop" ngModel> 
+                </div> 
+                <div class="form-group" id="user1-group">
+                    <i class="fa fa-user user1-group"></i>  
+                    <input type="text" class="form-control" placeholder="Nombre y Apellido" id="fname" name="nombre" ngModel required> 
+                </div>                
+                <div class="form-group" id="user2-group">
+                    <i class="fa fa-file user2-group" aria-hidden="true"></i>
+                    <input type="text" class="form-control" placeholder="Asunto" id="asunto" name="asunto" ngModel required>
                 </div>
-                <div class="form-group">
-                <label>Asunto</label>
-                <input type="text" class="form-control" name="asunto" ngModel>
+                <div class="form-group" id="user3-group">
+                    <i class="fa fa-envelope user3-group"></i>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" ngModel required>
                 </div>
-                <div class="form-group">
-                <label>E-mail</label>
-                <input type="email" class="form-control" name="email" ngModel>
+                <div class="form-group" id="user4-group">    
+                    <i class="fa fa-phone-square user4-group"></i>                   
+                    <input id="phone" name="phone" type="text" placeholder="Fono/celular" class="form-control" ngModel required>
                 </div>
-                <div class="form-group">
-                <label>Mensaje</label>
-                
-                <textarea class="form-control" cols="30" rows="6" name="mensaje" ngModel></textarea>
+                <div class="form-group" id="user5-group">            
+                    <i class="fa fa-comment user5-group" aria-hidden="true" ></i>              
+                    <textarea class="form-control" cols="30" rows="6" name="mensaje" placeholder="Ingresa tus comentarios, proyectos y consultas." ngModel></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
@@ -39,10 +45,9 @@
                     <i class="fa fa-envelope user3-group"></i>                 
                     <input input [class.is-invalid] = "userEmails.get('primaryEmail').invalid && userEmails.get('primaryEmail').touched" id="email" name="email" type="email" placeholder="Email" class="form-control" ngModel formControlName="primaryEmail">
                     <div *ngIf="(primEmail.invalid && primEmail.touched) || primEmail.dirty">
-                        <small *ngIf="primEmail.errors?.required" class="text-warning">
+                    <small *ngIf="primEmail.errors?.required" class="text-warning">
                         Correo electr&oacute;nico es requerido
-                    </small>
-                        
+                    </small>                        
                         <small *ngIf="primEmail.errors?.pattern" class="text-warning">
                         Favor ingresar una direcci&oacute;n de correo v&aacute;lida
                     </small>
