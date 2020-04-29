@@ -6,36 +6,31 @@
             <img src="/assets/images/avatar0.png"/>  
             <legend class="text-center user-header">Contacto</legend>           
         </div>        
-        <form class="col-12 form-horizontal user-form" [formGroup]="userEmails" method="post">                                       
-            <div class="form-group" id="user1-group">   
-                <i class="fa fa-user user1-group"></i>                  
-                <input id="fname" name="name" type="text" placeholder="Nombre" class="form-control" required>  
+        <form (ngSubmit)="contactForm2(form.value)" #form="ngForm">                                       
+            <div class="form-group" id="user-group">                     
+                <input type="text" hidden="true" disabled="true" class="form-control" id="codigop" name="codigop" ngModel> 
+            </div> 
+            <div class="form-group" id="user1-group">
+                <i class="fa fa-user user1-group"></i>  
+                <input type="text" class="form-control" placeholder="Nombre y Apellido" id="fname" name="nombre" ngModel required> 
+            </div>                
+            <div class="form-group" id="user2-group">
+                <i class="fa fa-file user2-group" aria-hidden="true"></i>
+                <input type="text" class="form-control" placeholder="Asunto" id="asunto" name="asunto" ngModel required>
             </div>
-            <div class="form-group" id="user2-group">  
-                <i class="fa fa-user-plus user2-group"></i>                                   
-                <input id="lname" name="name" type="text" placeholder="Apellido" class="form-control" required>
-            </div>
-            <div class="form-group" id="user3-group">  
-                <i class="fa fa-envelope user3-group"></i>                 
-                <input input [class.is-invalid] = "userEmails.get('primaryEmail').invalid && userEmails.get('primaryEmail').touched" id="email" name="email" type="email" placeholder="Email" class="form-control"  formControlName="primaryEmail">
-                <div *ngIf="(primEmail.invalid && primEmail.touched) || primEmail.dirty">
-                    <small *ngIf="primEmail.errors?.required" class="text-warning">
-                    Correo electr&oacute;nico es requerido
-                </small>
-                    <!--question mark(?) is a safe navigation operator-->
-                    <small *ngIf="primEmail.errors?.pattern" class="text-warning">
-                    Favor ingresar una direcci&oacute;n de correo v&aacute;lida
-                </small>
-              </div>        
+            <div class="form-group" id="user3-group">
+                <i class="fa fa-envelope user3-group"></i>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email" ngModel required>
             </div>
             <div class="form-group" id="user4-group">    
                 <i class="fa fa-phone-square user4-group"></i>                   
-                <input id="phone" name="phone" type="text" placeholder="Fono/celular" class="form-control">
+                <input id="phone" name="phone" type="text" placeholder="Fono/celular" class="form-control" ngModel required>
             </div>
-            <div class="form-group" id="user5-group">                   
-                <textarea class="form-control" id="message" name="mensage" placeholder="Ingresa tus comentarios, proyectos y consultas." rows="7"></textarea>
+            <div class="form-group" id="user5-group">            
+                <i class="fa fa-comment user5-group" aria-hidden="true" ></i>              
+                <textarea class="form-control" cols="30" rows="6" name="mensaje" placeholder="Ingresa tus comentarios, proyectos y consultas." ngModel></textarea>
             </div>
-            <button type="submit" class="btn btn-primary btn-md"><i class="fa fa-arrow-right"> Enviar</i></button>            
+            <button type="submit" class="btn btn-primary">Enviar</button> 
         </form>
      </div>
  </div>

@@ -31,7 +31,6 @@
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
               "./node_modules/font-awesome/css/font-awesome.css",
-              "node_modules/sweetalert2/src/sweetalert2.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -132,8 +131,5 @@
       }
     }
   },
-  "defaultProject": "normal",
-  "cli": {
-    "analytics": false
-  }
+  "defaultProject": "normal"
 }

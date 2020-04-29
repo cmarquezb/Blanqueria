@@ -50,6 +50,7 @@ import { ConjuntosComponent } from './todo/conjuntos/conjuntos.component';
 import { TruncatePipe } from './truncate.pipe';
 import { PromocionesService } from './todo/services/promociones.service';
 import { MessageService } from './todo/services/message.service';
+import { ContactitoService } from './todo/services/contactito.service';
 import { PromocionesComponent} from './todo/promociones/promociones.component';
 import { from } from 'rxjs';
 /*
@@ -113,6 +114,7 @@ import { environment } from 'src/environments/environment';*/
   ],
   providers: [
     MessageService,
+    ContactitoService,
     ProductosService,
     PromocionesService
   ],
